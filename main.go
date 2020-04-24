@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/siesgstarena/epicentre/src/config"
-	routes "github.com/siesgstarena/epicentre/src/router"
-	"github.com/siesgstarena/epicentre/src/services/logger"
+	"github.com/siesgstarena/epicentre/config"
+	routes "github.com/siesgstarena/epicentre/router"
+	"github.com/siesgstarena/epicentre/services/logger"
 )
 
 func main() {

@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/siesgstarena/epicentre/config"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
-	"github.com/siesgstarena/epicentre/src/config"
 )
 
 // Log is a package variable, which is initialized once during NewLogger() and shared to whole application
@@ -41,7 +42,7 @@ func (c LogConfig) getLogFileName() string {
 func LoadLogger(inputConfig config.MainConfig) error {
 
 	// access outside logger package
-	config := LogConfig {
+	config := LogConfig{
 		FileName:   config.Config.FileName,
 		MaxSize:    config.Config.MaxSize,
 		MaxAge:     config.Config.MaxAge,

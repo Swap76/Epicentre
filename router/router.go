@@ -2,12 +2,12 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/siesgstarena/epicentre/src/services/logger"
-	"github.com/siesgstarena/epicentre/src/web"
+	"github.com/siesgstarena/epicentre/services/logger"
+	"github.com/siesgstarena/epicentre/web"
 )
 
 // LoadRouter Configures all routes
-func LoadRouter(router *gin.Engine)  {
+func LoadRouter(router *gin.Engine) {
 	logger.Log.Info("Initializing routers")
 
 	router.NoRoute(func(c *gin.Context) {
